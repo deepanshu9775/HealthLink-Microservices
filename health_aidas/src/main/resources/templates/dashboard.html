@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health AI Dashboard</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f2f4f7;
+        }
+
+        .header {
+            text-align: center;
+            padding: 30px;
+            background: white;
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: #4facfe;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+        }
+
+        .title {
+            font-size: 28px;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: gray;
+        }
+
+        .cards {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            padding: 30px;
+        }
+
+        /* CLICKABLE CARD */
+        .card-link {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+        }
+
+        .card h3 {
+            margin: 0;
+            color: #4facfe;
+        }
+
+        .card p {
+            color: #555;
+            margin-top: 10px;
+        }
+
+        .special {
+            padding: 30px;
+        }
+
+        .chatbot {
+            background: white;
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .chat-box {
+            height: 300px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 10px;
+            overflow-y: auto;
+            background: #fafafa;
+        }
+
+        .input-area {
+            margin-top: 10px;
+            display: flex;
+        }
+
+        .input-area input {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .input-area button {
+            padding: 10px 20px;
+            background: #4facfe;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- Header -->
+<div class="header">
+    <div class="logo">👨‍⚕️</div>
+    <div class="title">Health AI</div>
+    <div class="subtitle">Deep. Health Specialised</div>
+</div>
+
+<!-- Cards -->
+<div class="cards">
+
+    <!-- Ayushman / E-Shram -->
+    <a class="card-link"
+       href="https://ayushmanbharat.haryana.gov.in/pm-jay/"
+       target="_blank">
+        <div class="card">
+            <h3>E-Shram / Ayushman Bharat</h3>
+            <p>Allotted hospitals & scheme details (Govt portal).</p>
+        </div>
+    </a>
+
+    <a class="card-link"
+       href="https://www.mygov.in/"
+       target="_blank">
+        <div class="card">
+            <h3>Government Schemes</h3>
+            <p>Central & State health schemes information.</p>
+        </div>
+    </a>
+
+    <a class="card-link"
+       href="https://www.esic.nic.in/"
+       target="_blank">
+        <div class="card">
+            <h3>ESI Facility</h3>
+            <p>ESI hospitals & private tie-ups.</p>
+        </div>
+    </a>
+
+    <a class="card-link"
+       href="https://nhm.gov.in/"
+       target="_blank">
+        <div class="card">
+            <h3>Government Hospitals</h3>
+            <p>Nearby government hospitals & facilities.</p>
+        </div>
+    </a>
+
+</div>
+
+<!-- Special -->
+<div class="special">
+    <h2>Special Hospitals & Diseases</h2>
+    <p>Specialised hospitals for cancer, heart, neuro and rare diseases.</p>
+</div>
+
+<!-- Chatbot -->
+<div class="chatbot">
+    <h2>Health AI Chatbot 🤖</h2>
+    <div class="chat-box"></div>
+
+    <div class="input-area">
+        <input type="text" placeholder="Enter symptoms or disease..." />
+        <button>Send</button>
+    </div>
+</div>
+<script src="/chat.js"></script>
+</body>
+</html>
